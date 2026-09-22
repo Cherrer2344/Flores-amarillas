@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Un ramo para vos 💛</title>
+    <title>Para miamor 💛</title>
 
     <style>
         * {
@@ -13,47 +13,110 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             min-height: 100vh;
             overflow-x: hidden;
             font-family: Georgia, "Times New Roman", serif;
             color: white;
+
             background:
-                radial-gradient(circle at 50% 35%, #263a68 0%, transparent 35%),
-                linear-gradient(180deg, #070b20 0%, #101936 55%, #1c263c 100%);
+                radial-gradient(
+                    circle at 50% 30%,
+                    rgba(47, 64, 110, 0.7),
+                    transparent 38%
+                ),
+                linear-gradient(
+                    180deg,
+                    #060a1b 0%,
+                    #0d1733 55%,
+                    #17233d 100%
+                );
         }
 
-        /* =========================
+        /* =====================================
            ESTRELLAS
-        ========================= */
+        ===================================== */
 
         .stars {
             position: fixed;
             inset: 0;
             overflow: hidden;
             pointer-events: none;
+            z-index: 1;
         }
 
         .star {
             position: absolute;
             width: 3px;
             height: 3px;
-            background: #fff7c7;
             border-radius: 50%;
-            box-shadow: 0 0 8px #fff1a8;
+            background: #fff4b0;
+            box-shadow: 0 0 8px #ffe98a;
             animation: twinkle 2s infinite alternate;
         }
 
-        .star:nth-child(1) { top: 8%; left: 12%; }
-        .star:nth-child(2) { top: 15%; left: 31%; animation-delay: .4s; }
-        .star:nth-child(3) { top: 7%; left: 67%; animation-delay: 1s; }
-        .star:nth-child(4) { top: 22%; left: 88%; animation-delay: .7s; }
-        .star:nth-child(5) { top: 32%; left: 8%; animation-delay: 1.3s; }
-        .star:nth-child(6) { top: 40%; left: 76%; animation-delay: .2s; }
-        .star:nth-child(7) { top: 55%; left: 15%; animation-delay: .8s; }
-        .star:nth-child(8) { top: 65%; left: 90%; animation-delay: 1.5s; }
-        .star:nth-child(9) { top: 76%; left: 7%; animation-delay: .3s; }
-        .star:nth-child(10) { top: 82%; left: 70%; animation-delay: 1.1s; }
+        .star:nth-child(1) {
+            top: 8%;
+            left: 12%;
+        }
+
+        .star:nth-child(2) {
+            top: 15%;
+            left: 30%;
+            animation-delay: .4s;
+        }
+
+        .star:nth-child(3) {
+            top: 9%;
+            left: 68%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(4) {
+            top: 23%;
+            left: 88%;
+            animation-delay: .7s;
+        }
+
+        .star:nth-child(5) {
+            top: 34%;
+            left: 8%;
+            animation-delay: 1.3s;
+        }
+
+        .star:nth-child(6) {
+            top: 42%;
+            left: 78%;
+            animation-delay: .2s;
+        }
+
+        .star:nth-child(7) {
+            top: 63%;
+            left: 12%;
+            animation-delay: .8s;
+        }
+
+        .star:nth-child(8) {
+            top: 70%;
+            left: 91%;
+            animation-delay: 1.5s;
+        }
+
+        .star:nth-child(9) {
+            top: 82%;
+            left: 8%;
+            animation-delay: .3s;
+        }
+
+        .star:nth-child(10) {
+            top: 85%;
+            left: 73%;
+            animation-delay: 1.1s;
+        }
 
         @keyframes twinkle {
             from {
@@ -67,537 +130,757 @@
             }
         }
 
-        /* =========================
+        /* =====================================
            LUNA
-        ========================= */
+        ===================================== */
 
         .moon {
             position: fixed;
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            background: #fff2b8;
+            width: 72px;
+            height: 72px;
             top: 7%;
             right: 8%;
-            box-shadow: 0 0 30px rgba(255, 238, 160, .45);
-            opacity: .9;
+            border-radius: 50%;
+            background: #fff1b0;
+            box-shadow: 0 0 35px rgba(255, 238, 160, .4);
+            z-index: 2;
         }
 
         .moon::after {
             content: "";
             position: absolute;
-            width: 75px;
-            height: 75px;
+            width: 72px;
+            height: 72px;
+            top: -11px;
+            left: -17px;
             border-radius: 50%;
-            background: #080d24;
-            top: -12px;
-            left: -18px;
+            background: #080d23;
         }
 
-        /* =========================
+        /* =====================================
            CONTENIDO
-        ========================= */
+        ===================================== */
 
         .page {
             position: relative;
             z-index: 5;
+
             min-height: 100vh;
+
             display: flex;
             flex-direction: column;
             align-items: center;
+
             text-align: center;
+
             padding: 55px 20px 80px;
         }
 
         .small-title {
-            color: #ffe68a;
-            font-size: 16px;
+            color: #ffe38a;
+            font-size: 15px;
             letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 14px;
+
             animation: fadeDown 1.5s ease;
         }
 
         h1 {
-            font-size: clamp(34px, 7vw, 64px);
+            font-size: clamp(34px, 7vw, 62px);
             color: #ffe16a;
+
             text-shadow:
-                0 0 10px rgba(255, 220, 80, .6),
+                0 0 10px rgba(255, 220, 80, .65),
                 0 0 30px rgba(255, 210, 50, .3);
-            margin-bottom: 15px;
+
+            margin-bottom: 18px;
+
             animation: fadeDown 1.8s ease;
         }
 
         .intro {
-            max-width: 600px;
-            font-size: clamp(17px, 3vw, 22px);
+            max-width: 620px;
+
+            font-size: clamp(17px, 3vw, 21px);
             line-height: 1.6;
-            color: #f8f5e7;
-            margin-bottom: 15px;
+
+            color: #f8f4e7;
+
+            margin-bottom: 12px;
+
             animation: fadeDown 2s ease;
         }
 
         .divider {
             color: #ffd83d;
-            font-size: 25px;
-            margin: 10px 0 20px;
-            letter-spacing: 12px;
+            font-size: 24px;
+            margin: 8px 0 10px;
+            letter-spacing: 10px;
         }
 
-        /* =========================
+        /* =====================================
            RAMO
-        ========================= */
+        ===================================== */
 
         .bouquet {
             position: relative;
-            width: min(430px, 90vw);
-            height: 470px;
-            margin-top: 10px;
+
+            width: min(430px, 92vw);
+            height: 500px;
+
+            margin-top: 0;
+
             animation: bouquetAppear 2s ease;
-        }
 
-        /* PAPEL */
-
-        .paper {
-            position: absolute;
-            width: 270px;
-            height: 240px;
-            left: 50%;
-            bottom: 5px;
-            transform: translateX(-50%);
-            background:
-                linear-gradient(
-                    135deg,
-                    #d9a85e,
-                    #f0c77e,
-                    #c68d48
-                );
-            clip-path: polygon(
-                8% 0,
-                92% 0,
-                100% 100%,
-                50% 80%,
-                0 100%
-            );
-            z-index: 8;
-            filter: drop-shadow(0 10px 12px rgba(0,0,0,.35));
-        }
-
-        .paper::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,.12);
-            clip-path: polygon(
-                20% 0,
-                45% 0,
-                50% 100%,
-                0 100%
+            filter: drop-shadow(
+                0 20px 18px rgba(0,0,0,.35)
             );
         }
 
-        /* CINTA */
-
-        .ribbon {
-            position: absolute;
-            z-index: 12;
-            width: 105px;
-            height: 42px;
-            left: 50%;
-            bottom: 53px;
-            transform: translateX(-50%);
-            background: #e8ad24;
-            border-radius: 50%;
-            box-shadow: 0 3px 7px rgba(0,0,0,.3);
-        }
-
-        .ribbon::before,
-        .ribbon::after {
-            content: "";
-            position: absolute;
-            width: 75px;
-            height: 65px;
-            background: #d99918;
-            top: -8px;
-            z-index: -1;
-        }
-
-        .ribbon::before {
-            right: 55px;
-            transform: rotate(28deg);
-            border-radius: 5px 45px 5px 45px;
-        }
-
-        .ribbon::after {
-            left: 55px;
-            transform: rotate(-28deg);
-            border-radius: 45px 5px 45px 5px;
-        }
-
-        /* TALLOS */
+        /* =====================================
+           TALLOS
+        ===================================== */
 
         .stem {
             position: absolute;
-            width: 7px;
-            height: 210px;
-            background: linear-gradient(
-                90deg,
-                #164d25,
-                #398e42,
-                #164d25
-            );
+
+            width: 8px;
+            height: 245px;
+
             bottom: 125px;
             left: 50%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #164c25,
+                    #3b9848,
+                    #164c25
+                );
+
+            border-radius: 10px;
+
             transform-origin: bottom;
+
             z-index: 2;
-            border-radius: 8px;
         }
 
         .stem.one {
-            transform: rotate(-18deg);
+            transform: translateX(-5px) rotate(-25deg);
         }
 
         .stem.two {
-            transform: rotate(-8deg);
+            transform: translateX(-4px) rotate(-13deg);
         }
 
         .stem.three {
-            transform: rotate(0deg);
+            transform: translateX(-4px) rotate(0deg);
         }
 
         .stem.four {
-            transform: rotate(10deg);
+            transform: translateX(-4px) rotate(13deg);
         }
 
         .stem.five {
-            transform: rotate(20deg);
+            transform: translateX(-4px) rotate(25deg);
         }
 
-        /* =========================
+        /* =====================================
            HOJAS
-        ========================= */
+        ===================================== */
 
         .leaf {
             position: absolute;
-            width: 70px;
-            height: 30px;
-            background: linear-gradient(135deg, #3e9948, #18562a);
+
+            width: 75px;
+            height: 32px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #479e50,
+                    #18562b
+                );
+
             border-radius: 100% 0 100% 0;
+
             z-index: 6;
         }
 
         .leaf.one {
-            bottom: 185px;
-            left: 62px;
+            bottom: 190px;
+            left: 52px;
             transform: rotate(-35deg);
         }
 
         .leaf.two {
-            bottom: 160px;
-            right: 55px;
+            bottom: 165px;
+            right: 45px;
             transform: rotate(35deg) scaleX(-1);
         }
 
         .leaf.three {
-            bottom: 220px;
-            left: 92px;
-            transform: rotate(-50deg);
+            bottom: 230px;
+            left: 82px;
+            transform: rotate(-48deg);
         }
 
         .leaf.four {
-            bottom: 210px;
-            right: 85px;
-            transform: rotate(50deg) scaleX(-1);
+            bottom: 215px;
+            right: 78px;
+            transform: rotate(48deg) scaleX(-1);
         }
 
-        /* =========================
+        /* =====================================
            FLORES
-        ========================= */
+        ===================================== */
 
         .flower {
             position: absolute;
+
+            width: 120px;
+            height: 120px;
+
             z-index: 7;
-            width: 115px;
-            height: 115px;
-            animation: flowerFloat 3s ease-in-out infinite alternate;
+
+            animation:
+                flowerFloat 3s ease-in-out infinite alternate;
         }
 
         .flower.big {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
         }
 
         .flower.small {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
         }
 
+        /*
+            POSICIONES DEL RAMO
+        */
+
         .flower.center {
+            top: 18px;
             left: 50%;
-            top: 28px;
             transform: translateX(-50%);
+            z-index: 10;
         }
 
         .flower.left {
-            left: 25px;
-            top: 80px;
-            animation-delay: .4s;
+            top: 75px;
+            left: 40px;
+            transform: rotate(-8deg);
         }
 
         .flower.right {
-            right: 25px;
-            top: 78px;
-            animation-delay: .8s;
+            top: 73px;
+            right: 40px;
+            transform: rotate(8deg);
         }
 
         .flower.bottom-left {
-            left: 75px;
-            top: 155px;
-            animation-delay: .6s;
+            top: 165px;
+            left: 92px;
+            z-index: 9;
         }
 
         .flower.bottom-right {
-            right: 75px;
-            top: 155px;
-            animation-delay: 1s;
+            top: 160px;
+            right: 92px;
+            z-index: 9;
         }
+
+        /* =====================================
+           PÉTALOS
+        ===================================== */
 
         .petal {
             position: absolute;
+
             width: 30%;
-            height: 50%;
+            height: 51%;
+
             left: 35%;
             top: 0;
-            background: linear-gradient(
-                90deg,
-                #ffb800,
-                #ffe25a,
-                #ffc400
-            );
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffb800,
+                    #ffe35c,
+                    #ffc400
+                );
+
             border-radius: 50% 50% 45% 45%;
+
             transform-origin: 50% 100%;
-            box-shadow: 0 0 7px rgba(255, 202, 0, .5);
+
+            box-shadow:
+                0 0 7px rgba(255, 202, 0, .45);
         }
 
         .big .petal {
             width: 28%;
-            height: 48%;
             left: 36%;
         }
 
         .small .petal {
             width: 30%;
-            height: 48%;
             left: 35%;
         }
 
-        .petal:nth-child(1) { transform: rotate(0deg); }
-        .petal:nth-child(2) { transform: rotate(45deg); }
-        .petal:nth-child(3) { transform: rotate(90deg); }
-        .petal:nth-child(4) { transform: rotate(135deg); }
-        .petal:nth-child(5) { transform: rotate(180deg); }
-        .petal:nth-child(6) { transform: rotate(225deg); }
-        .petal:nth-child(7) { transform: rotate(270deg); }
-        .petal:nth-child(8) { transform: rotate(315deg); }
+        .petal:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .petal:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .petal:nth-child(3) {
+            transform: rotate(90deg);
+        }
+
+        .petal:nth-child(4) {
+            transform: rotate(135deg);
+        }
+
+        .petal:nth-child(5) {
+            transform: rotate(180deg);
+        }
+
+        .petal:nth-child(6) {
+            transform: rotate(225deg);
+        }
+
+        .petal:nth-child(7) {
+            transform: rotate(270deg);
+        }
+
+        .petal:nth-child(8) {
+            transform: rotate(315deg);
+        }
+
+        /* =====================================
+           CENTROS
+        ===================================== */
 
         .flower-center {
             position: absolute;
-            width: 34%;
-            height: 34%;
-            left: 33%;
-            top: 33%;
+
+            width: 35%;
+            height: 35%;
+
+            left: 32.5%;
+            top: 32.5%;
+
+            border-radius: 50%;
+
             background:
                 radial-gradient(
                     circle,
-                    #754400 0%,
-                    #4b2800 55%,
-                    #291600 100%
+                    #7a4800 0%,
+                    #4d2900 55%,
+                    #281500 100%
                 );
-            border-radius: 50%;
-            z-index: 10;
+
+            z-index: 12;
+
             box-shadow:
-                inset 0 0 12px #170c00,
+                inset 0 0 13px #170c00,
                 0 0 5px rgba(0,0,0,.5);
         }
 
-        /* =========================
-           FLORES BLANCAS PEQUEÑAS
-        ========================= */
+        /* =====================================
+           FLORECITAS BLANCAS
+        ===================================== */
 
         .daisy {
             position: absolute;
-            width: 42px;
-            height: 42px;
-            z-index: 9;
+
+            width: 45px;
+            height: 45px;
+
+            z-index: 14;
         }
 
         .daisy.one {
-            left: 115px;
-            top: 85px;
+            top: 70px;
+            left: 122px;
         }
 
         .daisy.two {
-            right: 105px;
-            top: 125px;
+            top: 115px;
+            right: 112px;
         }
 
         .daisy.three {
-            left: 150px;
             top: 180px;
+            left: 150px;
         }
 
         .daisy-petal {
             position: absolute;
+
             width: 13px;
-            height: 23px;
-            background: #fffdf0;
-            border-radius: 50%;
-            left: 15px;
+            height: 24px;
+
+            left: 16px;
             top: 0;
+
+            background: #fffdf0;
+
+            border-radius: 50%;
+
             transform-origin: 50% 100%;
         }
 
-        .daisy-petal:nth-child(1) { transform: rotate(0deg); }
-        .daisy-petal:nth-child(2) { transform: rotate(60deg); }
-        .daisy-petal:nth-child(3) { transform: rotate(120deg); }
-        .daisy-petal:nth-child(4) { transform: rotate(180deg); }
-        .daisy-petal:nth-child(5) { transform: rotate(240deg); }
-        .daisy-petal:nth-child(6) { transform: rotate(300deg); }
+        .daisy-petal:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .daisy-petal:nth-child(2) {
+            transform: rotate(60deg);
+        }
+
+        .daisy-petal:nth-child(3) {
+            transform: rotate(120deg);
+        }
+
+        .daisy-petal:nth-child(4) {
+            transform: rotate(180deg);
+        }
+
+        .daisy-petal:nth-child(5) {
+            transform: rotate(240deg);
+        }
+
+        .daisy-petal:nth-child(6) {
+            transform: rotate(300deg);
+        }
 
         .daisy-center {
             position: absolute;
-            width: 13px;
-            height: 13px;
+
+            width: 14px;
+            height: 14px;
+
+            left: 15px;
+            top: 15px;
+
+            background: #e8aa00;
+
             border-radius: 50%;
-            background: #e7a900;
-            left: 14px;
-            top: 14px;
+
             z-index: 5;
         }
 
-        /* =========================
+        /* =====================================
+           PAPEL DEL RAMO
+        ===================================== */
+
+        .paper {
+            position: absolute;
+
+            width: 290px;
+            height: 250px;
+
+            left: 50%;
+            bottom: 5px;
+
+            transform: translateX(-50%);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c88d49,
+                    #f0c77e,
+                    #c08a46
+                );
+
+            clip-path: polygon(
+                8% 0,
+                92% 0,
+                100% 100%,
+                50% 78%,
+                0 100%
+            );
+
+            z-index: 16;
+        }
+
+        .paper::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    transparent 35%,
+                    rgba(255,255,255,.17) 36%,
+                    transparent 38%
+                );
+        }
+
+        /* =====================================
+           CINTA
+        ===================================== */
+
+        .ribbon {
+            position: absolute;
+
+            width: 105px;
+            height: 40px;
+
+            left: 50%;
+            bottom: 55px;
+
+            transform: translateX(-50%);
+
+            background: #e6aa22;
+
+            border-radius: 50%;
+
+            z-index: 20;
+
+            box-shadow:
+                0 3px 8px rgba(0,0,0,.3);
+        }
+
+        .ribbon::before,
+        .ribbon::after {
+            content: "";
+
+            position: absolute;
+
+            width: 80px;
+            height: 62px;
+
+            top: -9px;
+
+            background: #d69a18;
+
+            z-index: -1;
+        }
+
+        .ribbon::before {
+            right: 54px;
+
+            transform: rotate(28deg);
+
+            border-radius:
+                5px 45px 5px 45px;
+        }
+
+        .ribbon::after {
+            left: 54px;
+
+            transform: rotate(-28deg);
+
+            border-radius:
+                45px 5px 45px 5px;
+        }
+
+        /* =====================================
            MENSAJE
-        ========================= */
+        ===================================== */
 
         .message {
             max-width: 650px;
+
             font-size: 19px;
             line-height: 1.8;
+
             color: #f7f3e5;
-            margin-top: 5px;
+
+            margin-top: -10px;
+
             opacity: 0;
-            animation: messageAppear 2s ease 1.5s forwards;
+
+            animation:
+                messageAppear 2s ease 1.5s forwards;
         }
 
         .heart {
             display: inline-block;
+
             color: #ffd83d;
-            font-size: 27px;
-            animation: heartbeat 1.4s infinite;
+
+            font-size: 28px;
+
+            animation:
+                heartbeat 1.4s infinite;
         }
 
-        /* =========================
+        /* =====================================
            BOTÓN
-        ========================= */
+        ===================================== */
 
         .button {
             margin-top: 28px;
-            padding: 14px 32px;
-            border: 1px solid #ffd84d;
+
+            padding: 14px 34px;
+
+            border:
+                1px solid #ffd84d;
+
             border-radius: 40px;
-            background: rgba(255, 216, 61, .08);
+
+            background:
+                rgba(255,216,61,.08);
+
             color: #ffe477;
+
             font-size: 17px;
+
             font-family: Georgia, serif;
+
             cursor: pointer;
+
             transition: .3s;
+
             box-shadow:
-                0 0 15px rgba(255, 215, 70, .15);
+                0 0 15px rgba(255,215,70,.15);
         }
 
         .button:hover {
-            background: rgba(255, 216, 61, .2);
+            background:
+                rgba(255,216,61,.2);
+
             box-shadow:
-                0 0 25px rgba(255, 215, 70, .35);
+                0 0 25px rgba(255,215,70,.35);
+
             transform: scale(1.05);
         }
 
-        /* =========================
+        /* =====================================
            CARTA
-        ========================= */
+        ===================================== */
 
         .letter {
             position: fixed;
+
             inset: 0;
+
             z-index: 100;
+
             display: none;
+
             justify-content: center;
             align-items: center;
-            padding: 25px;
-            background: rgba(3, 7, 20, .85);
+
+            padding: 20px;
+
+            background:
+                rgba(3,7,20,.88);
+
             backdrop-filter: blur(8px);
         }
 
         .letter.show {
             display: flex;
-            animation: fadeIn .5s ease;
+
+            animation:
+                fadeIn .5s ease;
         }
 
         .letter-box {
             position: relative;
-            width: min(550px, 95vw);
-            max-height: 85vh;
+
+            width: min(580px, 94vw);
+
+            max-height: 88vh;
+
             overflow-y: auto;
-            padding: 40px 30px;
+
+            padding: 42px 32px;
+
             background:
                 linear-gradient(
                     145deg,
                     #fff9dc,
-                    #fff1b8
+                    #ffefb0
                 );
+
             color: #4a3215;
+
             border-radius: 18px;
+
             box-shadow:
                 0 20px 70px rgba(0,0,0,.6);
-            animation: letterOpen .6s ease;
+
+            animation:
+                letterOpen .6s ease;
         }
 
         .letter-box h2 {
             color: #bd8010;
-            font-size: 30px;
-            margin-bottom: 20px;
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
         }
 
         .letter-box p {
             font-size: 18px;
+
             line-height: 1.8;
-            margin-bottom: 16px;
+
+            margin-bottom: 18px;
+        }
+
+        .letter-box .big-final {
+            font-size: 21px;
+
+            font-weight: bold;
+
+            color: #9b6709;
         }
 
         .close {
             position: absolute;
-            top: 12px;
-            right: 18px;
+
+            top: 10px;
+            right: 17px;
+
             border: none;
+
             background: none;
+
             color: #8b621f;
-            font-size: 28px;
+
+            font-size: 30px;
+
             cursor: pointer;
         }
 
-        /* =========================
-           CORAZONES FLOTANDO
-        ========================= */
+        /* =====================================
+           CORAZONES
+        ===================================== */
 
         .floating-heart {
             position: fixed;
+
             bottom: -30px;
+
             color: #ffd84d;
+
             font-size: 20px;
+
             z-index: 3;
+
             pointer-events: none;
-            animation: floatHeart linear infinite;
+
             opacity: .65;
+
+            animation:
+                floatHeart linear infinite;
         }
 
         .floating-heart:nth-of-type(1) {
@@ -625,7 +908,10 @@
 
         @keyframes floatHeart {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
                 opacity: 0;
             }
 
@@ -634,32 +920,17 @@
             }
 
             100% {
-                transform: translateY(-110vh) rotate(25deg);
+                transform:
+                    translateY(-110vh)
+                    rotate(25deg);
+
                 opacity: 0;
             }
         }
 
-        @keyframes bouquetAppear {
-            from {
-                opacity: 0;
-                transform: translateY(60px) scale(.7);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes flowerFloat {
-            from {
-                transform: translateY(0) rotate(-1deg);
-            }
-
-            to {
-                transform: translateY(-6px) rotate(1deg);
-            }
-        }
+        /* =====================================
+           ANIMACIONES
+        ===================================== */
 
         @keyframes fadeDown {
             from {
@@ -670,6 +941,32 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @keyframes bouquetAppear {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(60px)
+                    scale(.7);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+        @keyframes flowerFloat {
+            from {
+                margin-top: 0;
+            }
+
+            to {
+                margin-top: -5px;
             }
         }
 
@@ -708,18 +1005,22 @@
         @keyframes letterOpen {
             from {
                 opacity: 0;
-                transform: scale(.8) translateY(30px);
+                transform:
+                    scale(.8)
+                    translateY(30px);
             }
 
             to {
                 opacity: 1;
-                transform: scale(1) translateY(0);
+                transform:
+                    scale(1)
+                    translateY(0);
             }
         }
 
-        /* =========================
+        /* =====================================
            CELULAR
-        ========================= */
+        ===================================== */
 
         @media (max-width: 600px) {
 
@@ -739,9 +1040,10 @@
             }
 
             .bouquet {
-                transform: scale(.82);
-                margin-top: -15px;
-                margin-bottom: -55px;
+                transform: scale(.78);
+
+                margin-top: -20px;
+                margin-bottom: -70px;
             }
 
             .message {
@@ -749,11 +1051,18 @@
             }
 
             .letter-box {
-                padding: 35px 22px;
+                padding:
+                    38px
+                    22px
+                    30px;
             }
 
             .letter-box p {
                 font-size: 16px;
+            }
+
+            .letter-box .big-final {
+                font-size: 18px;
             }
         }
     </style>
@@ -762,7 +1071,9 @@
 <body>
 
     <!-- ESTRELLAS -->
+
     <div class="stars">
+
         <span class="star"></span>
         <span class="star"></span>
         <span class="star"></span>
@@ -773,51 +1084,68 @@
         <span class="star"></span>
         <span class="star"></span>
         <span class="star"></span>
+
     </div>
 
+
     <!-- LUNA -->
+
     <div class="moon"></div>
 
-    <!-- CORAZONES -->
+
+    <!-- CORAZONES FLOTANDO -->
+
     <div class="floating-heart">♥</div>
     <div class="floating-heart">♥</div>
     <div class="floating-heart">♥</div>
     <div class="floating-heart">♥</div>
+
+
+    <!-- =====================================
+         PÁGINA
+    ===================================== -->
 
     <main class="page">
 
         <div class="small-title">
-            Para alguien especial
+            Para miamor
         </div>
+
 
         <h1>
             ¡Feliz 21 de Septiembre! 💛
         </h1>
 
+
         <p class="intro">
-            Hoy quería regalarte algo que pudiera transmitir,
-            aunque sea un poquito, lo especial que sos.
+            Hoy quería regalarte algo especial...
+            aunque por ahora tenga que ser virtual.
         </p>
+
 
         <div class="divider">
             ♥ ✦ ♥
         </div>
 
 
-        <!-- =========================
+        <!-- =====================================
              RAMO
-        ========================= -->
+        ===================================== -->
 
         <div class="bouquet">
 
+
             <!-- TALLOS -->
+
             <div class="stem one"></div>
             <div class="stem two"></div>
             <div class="stem three"></div>
             <div class="stem four"></div>
             <div class="stem five"></div>
 
+
             <!-- HOJAS -->
+
             <div class="leaf one"></div>
             <div class="leaf two"></div>
             <div class="leaf three"></div>
@@ -825,6 +1153,7 @@
 
 
             <!-- GIRASOL CENTRAL -->
+
             <div class="flower big center">
 
                 <div class="petal"></div>
@@ -842,6 +1171,7 @@
 
 
             <!-- FLOR IZQUIERDA -->
+
             <div class="flower left">
 
                 <div class="petal"></div>
@@ -859,6 +1189,7 @@
 
 
             <!-- FLOR DERECHA -->
+
             <div class="flower right">
 
                 <div class="petal"></div>
@@ -875,7 +1206,8 @@
             </div>
 
 
-            <!-- FLOR ABAJO IZQUIERDA -->
+            <!-- FLOR INFERIOR IZQUIERDA -->
+
             <div class="flower small bottom-left">
 
                 <div class="petal"></div>
@@ -892,7 +1224,8 @@
             </div>
 
 
-            <!-- FLOR ABAJO DERECHA -->
+            <!-- FLOR INFERIOR DERECHA -->
+
             <div class="flower small bottom-right">
 
                 <div class="petal"></div>
@@ -909,115 +1242,146 @@
             </div>
 
 
-            <!-- MARGARITAS BLANCAS -->
+            <!-- MARGARITAS -->
 
             <div class="daisy one">
+
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
+
                 <div class="daisy-center"></div>
+
             </div>
+
 
             <div class="daisy two">
+
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
+
                 <div class="daisy-center"></div>
+
             </div>
+
 
             <div class="daisy three">
+
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
                 <div class="daisy-petal"></div>
+
                 <div class="daisy-center"></div>
+
             </div>
 
 
-            <!-- PAPEL DEL RAMO -->
+            <!-- PAPEL -->
+
             <div class="paper"></div>
 
+
             <!-- CINTA -->
+
             <div class="ribbon"></div>
 
         </div>
 
 
-        <!-- MENSAJE -->
+        <!-- =====================================
+             MENSAJE
+        ===================================== -->
 
         <p class="message">
-            Que nunca te falten motivos para sonreír,
-            personas que te quieran y momentos que te hagan feliz.
+
+            Porque te merecés un poquito de todo lo lindo
+            que pueda regalarte.
+
             <br><br>
 
-            Y aunque este ramo sea solamente virtual,
-            está hecho con mucho cariño.
-            <br>
-
             <span class="heart">♥</span>
+
         </p>
 
 
         <!-- BOTÓN -->
 
-        <button class="button" onclick="openLetter()">
+        <button
+            class="button"
+            onclick="openLetter()"
+        >
             Abrir mi regalo 💌
         </button>
 
     </main>
 
 
-    <!-- =========================
+    <!-- =====================================
          CARTA
-    ========================= -->
+    ===================================== -->
 
-    <div class="letter" id="letter">
+    <div
+        class="letter"
+        id="letter"
+    >
 
         <div class="letter-box">
 
-            <button class="close" onclick="closeLetter()">
+            <button
+                class="close"
+                onclick="closeLetter()"
+            >
                 ×
             </button>
 
+
             <h2>
-                Para vos 💛
+                Para miamor 💛
             </h2>
 
-            <p>
-                Quería que este día tuviera un detalle diferente,
-                así que pensé en regalarte un ramo.
-            </p>
 
             <p>
-                No uno que se marchite después de unos días,
-                sino uno que pueda quedar guardado como un pequeño
-                recuerdo de este momento.
+                Feliz dia, miamor.
             </p>
+
 
             <p>
-                Espero que siempre puedas encontrar motivos para
-                sonreír, cumplir tus sueños y rodearte de personas
-                que te hagan sentir querida y especial.
+                Se que no te importa mucho fechas asi por cositas
+                como "se pueden hacer en todo momento", pero no quita
+                que siga siendo especial y que pueda dedicarte
+                cositas asi.
             </p>
+
 
             <p>
-                Gracias por ser tan única, tan linda y tan vos.
+                Realmente te amo un monton y me encanta poder
+                dedicarte cositas como estas...
             </p>
 
-            <p>
-                Feliz 21 de septiembre 💛
+
+            <p class="big-final">
+                ALGUN DIA TE VOY A DAR UN RAMO GIGANTE DE TODO TIPO
+                DE FLORES Y UN EPIC CHILEMACARROL
             </p>
 
-            <p style="text-align:center; font-size:30px;">
-                🌻 🌼 💛 🌼 🌻
+
+            <p style="text-align:center; font-size:32px;">
+                🌻 🌼 🌻 🌼 🌻
+            </p>
+
+
+            <p style="text-align:center;">
+                💛
             </p>
 
         </div>
@@ -1025,24 +1389,51 @@
     </div>
 
 
+    <!-- =====================================
+         JAVASCRIPT
+    ===================================== -->
+
     <script>
 
         function openLetter() {
-            document.getElementById("letter").classList.add("show");
+
+            document
+                .getElementById("letter")
+                .classList
+                .add("show");
+
         }
+
 
         function closeLetter() {
-            document.getElementById("letter").classList.remove("show");
+
+            document
+                .getElementById("letter")
+                .classList
+                .remove("show");
+
         }
 
-        // Cerrar haciendo clic fuera de la carta
-        document.getElementById("letter").addEventListener("click", function(event) {
 
-            if (event.target === this) {
-                closeLetter();
-            }
+        /*
+            También permite cerrar la carta
+            haciendo clic fuera de ella.
+        */
 
-        });
+        document
+            .getElementById("letter")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (event.target === this) {
+
+                        closeLetter();
+
+                    }
+
+                }
+            );
 
     </script>
 
